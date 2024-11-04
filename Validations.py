@@ -27,6 +27,7 @@ def validate_number(number:str):
     number = basic_validation(input=number)
     if len(number) < 3 :
         return False
+    #а десяткова система????????????????????
     if number[0] == "0" or number[0] == "o" :
         if number[1] == "b" :
             old_base = 2
