@@ -41,6 +41,16 @@ def validate(number):
         else :
             number = input("Sorry, try again\n:")
 
+def validate_base(base:str) :
+    #some basic validations, making sure user inputted smth and strip, lower
+    #maybe make a basic validations function in improvements and merge it hear
+    # isdecimal() function has a interesting description (at least one character) maybe it can be used for validations in improve
+    # make sure it is int in range 1-16
+    if base.isdecimal() :
+        if 1 <= int(base) <= 16 :
+            return  base
+
+
 
 
 
