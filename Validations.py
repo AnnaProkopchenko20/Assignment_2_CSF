@@ -43,8 +43,6 @@ def validate(number):
             number = input("Sorry, try again\n:")
 
 
-#print(validate(input()))
-
 def validate_base(base:str) :
     while True :
         base = base.strip()
@@ -54,8 +52,6 @@ def validate_base(base:str) :
                 if 1 <= int(base) <= 16 :
                     return base
         base = input("Sorry, try again\n:")
-
-print(validate_base(input()))
 
 
 
