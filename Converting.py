@@ -5,6 +5,8 @@ def to_decimal(number:str,old_base):
 
 def to_other(old_num_dec:int, new_base:int) :
     new_number = ""
+    if old_num_dec == 0 and new_base != 1 :
+        return 0
     if new_base == 1 :
         return "1"*old_num_dec
     if new_base == 10 :
@@ -16,7 +18,7 @@ def to_other(old_num_dec:int, new_base:int) :
     return new_number
 
 
-
+print(to_other(0,1))
 
 
 
