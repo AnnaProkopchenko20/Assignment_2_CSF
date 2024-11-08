@@ -1,7 +1,7 @@
-from Main_Body import ALL_NUMBERS
+ALL_NUMBERS = ("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F")
 
 def to_decimal(number:str,old_base):
-    return sum([num * old_base ** ind for num,ind in enumerate(number[::-1])])
+    return sum([ALL_NUMBERS.index(num.upper()) * old_base ** ind for ind,num in enumerate(number[::-1])])
 
 def to_other(old_num_dec:int, new_base:int) :
     new_number = ""
@@ -17,8 +17,6 @@ def to_other(old_num_dec:int, new_base:int) :
     new_number = new_number[::-1]
     return new_number
 
-
-print(to_other(0,1))
 
 
 

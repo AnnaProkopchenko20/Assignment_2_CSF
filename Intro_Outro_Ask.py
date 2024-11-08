@@ -1,14 +1,26 @@
-from Validations import validate
-
-
 def intro():
-    print("Hello!\nThis a converter for numbers of different bases\nBases available are from 1 to 16")
-    print("For binary(base 2) enter with prefics '0b',\n for decimal(base 10) just write the number,\n for hexadecimal(base 16) enter with prefics '0x'")
-    print("For any other enter with a ending 'xn', where n is a base")
+    print("Hello!\nThis a converter for numbers of different bases\nAvailable bases are from 1 to 16")
+    print("For binary(base 2) enter with prefix '0b',\nfor decimal(base 10) just write the number,\nfor hexadecimal(base 16) enter with prefix '0x'")
+    print("For any other base enter with a ending 'xn', where n is a base")
     print("Some examples:\nBinary - '0b1010'\nHexadecimal - '0x8F'\nTrinary(base 3) - '211x3'")
-    number = validate(input("Please, enter your number\n: "))
-    print("And you also need to pick a new base of the number.\nFor this you should just enter the number of the base")
-    new_base = input("Please, enter your base\n: ")
+    print("So firstly you enter your number and then the new base")
+
+def ask(option):
+    while True :
+        option = option.strip()
+        option = option.lower()
+        if option == 'yes' :
+            return False
+        if option == 'no' :
+            return True
+        option = input("Sorry, try again\n: ")
 
 
+def outro():
+    print("Thanks for checking out my app!")
+    print('''
+ /)_/)
+(,,>.<)
+/ >❤️
+ ''')
 
