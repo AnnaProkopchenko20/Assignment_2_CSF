@@ -8,6 +8,7 @@ from time import sleep
 
 intro()
 
+
 all_requests = []
 while True :
     number, old_base = validate(input("Please, enter your number\n: "))
@@ -15,6 +16,7 @@ while True :
     os.system('cls')
     new_number = to_other(to_decimal(number,old_base),new_base)
     result = f"{number} in base {old_base} system is {new_number} in base {new_base} system"
+    #if user enters the same base
     all_requests.append(result)
     print(result)
     sleep(3)
@@ -22,6 +24,7 @@ while True :
     os.system('cls')
     if end :
         break
+
 
 #записування всіх requests у файл????
 system('cls')

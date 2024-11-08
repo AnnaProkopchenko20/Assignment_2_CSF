@@ -22,7 +22,7 @@ def validate(number):
     while True :
         number = number.strip()
         number = number.lower()
-        if number == None:
+        if not number.isalnum():
             number = input("Sorry, try again\n: ")
             continue
         base = 10
@@ -36,11 +36,10 @@ def validate(number):
                 base = int(number[len(number) - 1])
             elif number[len(number) - 3] == "x" and number[len(number) - 2:].isdecimal():
                 base = int(number[len(number) - 2:])
-            is_valid,formatted_number = right_base(base=base, number=number)
+        is_valid,formatted_number = right_base(base=base, number=number)
         if is_valid:
             return formatted_number, base
-        else :
-            number = input("Sorry, try again\n: ")
+        number = input("Sorry, try again\n: ")
 
 
 def validate_base(base:str) :
