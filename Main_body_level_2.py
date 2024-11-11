@@ -5,7 +5,7 @@ from Intro_Outro_Ask import ask, outro
 from extra_functions_for_level_2 import validate_l2, validate_base_l2
 
 
-print("Hello!\nThis a converter for numbers of different bases\nAvailable bases are 10, 16, 2")
+print("Hello!\nThis is a converter for numbers of different bases\nAvailable bases are 10, 16, 2")
 print("For binary(base 2) enter with prefix '0b',\nfor decimal(base 10) just write the number,\nfor hexadecimal(base 16) enter with prefix '0x'")
 print("Some examples:\nBinary - '0b1010'\nHexadecimal - '0x8F'\nDecimal - '142'")
 print("So firstly you enter your number and then the new base")

@@ -4,7 +4,7 @@ from Intro_Outro_Ask import ask, outro
 from extra_functions_for_level_1 import validate_l1
 
 
-print("Hello!\nThis a converter from binary to decimal and vice versa")
+print("Hello!\nThis is a converter from binary to decimal and vice versa")
 print("For binary(base 2) enter with prefix '0b',\nfor decimal(base 10) just write the number")
 print("Some examples:\nBinary - '0b1010'\nDecimal - '142'")
 
