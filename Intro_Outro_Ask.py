@@ -26,6 +26,10 @@ def outro():
  /)_/)
 (,,>.<)
 / >❤️
+
+
+https://www.messletters.com/en/text-art/
  ''')
+
     sleep(20)
 

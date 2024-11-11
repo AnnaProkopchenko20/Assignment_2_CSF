@@ -12,7 +12,7 @@ intro()
 all_requests = []
 while True :
     number, old_base = validate(input("Please, enter your number\n: "))
-    new_base = validate_base(input("Please, enter your base\n: "))
+    new_base = validate_base(input("Please, enter new base\n: "))
     os.system('cls')
     new_number = to_other(to_decimal(number,old_base),new_base)
     result = f"{number} in base {old_base} system is {new_number} in base {new_base} system"
@@ -27,11 +27,15 @@ while True :
 
 
 #записування всіх requests у файл????
-system('cls')
+
 print(f"You have converted {len(all_requests)} times : ")
 for i in all_requests :
     print(i)
 outro()
+
+
+#maybe add a readme and proper gitignore
+
 
 
 

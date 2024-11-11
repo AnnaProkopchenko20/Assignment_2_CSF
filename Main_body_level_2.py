@@ -14,7 +14,7 @@ print("So firstly you enter your number and then the new base")
 all_requests = []
 while True :
     number, old_base = validate_l2(input("Please, enter your number\n: "))
-    new_base = validate_base_l2(input("Please, enter your base\n: "))
+    new_base = validate_base_l2(input("Please, enter new base\n: "))
     os.system('cls')
     new_number = to_other(to_decimal(number,old_base),new_base)
     result = f"{number} in base {old_base} system is {new_number} in base {new_base} system"
