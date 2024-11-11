@@ -16,15 +16,24 @@ def right_base(base,number) :
             return False, number
     return True, number
 
+import pickle
 
-#could there be a problem with that magical ")" appearing in the end of each input?
 def validate(number):
     while True :
         number = number.strip()
         number = number.lower()
+        # there was a problem with magical ")" appearing in the end of input
+        if ")" in number:
+            number = number.replace(")","")
+
         if not number.isalnum():
             number = input("Sorry, try again\n: ")
             continue
+        with open("all_roman_numerals_dictionary","rb") as file:
+            dict = pickle.load(file)
+            for i in dict :
+                if dict[i] == number.upper():
+                    return [number,i], "r"
         base = 10
         if len(number) >= 3:
             if number[0] == "0" or number[0] == "o":
@@ -42,15 +51,19 @@ def validate(number):
         number = input("Sorry, try again\n: ")
 
 
-def validate_base(base:str) :
+def validate_base(base:str,num,old_base) :
     while True :
         base = base.strip()
         base = base.lower()
-        if base != None :
+        if base != old_base:
             if base.isdecimal():
                 base = int(base)
                 if 1 <= base <= 16 :
                     return base
+            if base == "r" and 1<= num <= 3999 :
+                return base
+            elif base == "r" and num > 3999 :
+                print("roman numerals only exist in range 1 to 3999, anything else can't be converted")
         base = input("Sorry, try again\n:")
 
 
