@@ -6,7 +6,7 @@ def intro():
     print("For binary(base 2) enter with prefix '0b'\nfor decimal(base 10) and roman numerals just write the number\nfor hexadecimal(base 16) enter with prefix '0x'")
     print("For any other base enter with a ending 'xn', where n is a base")
     print("Some examples:\nBinary - '0b1010'\nHexadecimal - '0x8F'\nTrinary(base 3) - '211x3'\nRoman numerals - 'MMMV'")
-    print("When entering hew base just enter the number, for roman numerals enter - 'r'")
+    print("When entering new base just enter the number, for roman numerals enter - 'r'")
     print("So firstly you enter your number and then the new base")
 
 
